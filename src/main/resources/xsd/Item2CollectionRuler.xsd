@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://base.repositorio.unesp.br/XMLSchema/Item2CollectionRuler" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+    xmlns:i="http://base.repositorio.unesp.br/XMLSchema/Item2CollectionRuler">
+  
+	<!-- structure -->
+    <xs:element name="university" type="i:University" />
+	<!-- end structure -->
+	
+	<!-- types definitions -->
+    <xs:complexType name="University" >
+		<xs:sequence>
+			<xs:element name="rules" type="i:Rules" />
+			<xs:element name="campi" type="i:Campi" />
+		</xs:sequence>
+		<xs:attribute name="label" use="optional" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:complexType name="Rules" >
+		<xs:sequence>
+			<xs:element name="match" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Campi" >
+      <xs:sequence>
+        <xs:element name="campus" type="i:Campus" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="Campus">
+		<xs:sequence>
+			<xs:element name="rules" type="i:Rules" />
+			<xs:choice>
+				<xs:element name="departments" type="i:Departments" />
+				<xs:element name="handle" type="xs:string" />
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="label" use="optional" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:complexType name="Departments" >
+		<xs:sequence>
+			<xs:element name="department" type="i:Department"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+    </xs:complexType>
+	
+	<xs:complexType name="Department" >
+		<xs:sequence>
+			<xs:element name="rules" type="i:Rules" />
+			<xs:element name="handle" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="label" use="optional" type="xs:string" />
+	</xs:complexType>	
+	
+	<!-- end types definitions -->
+
+</xs:schema>
