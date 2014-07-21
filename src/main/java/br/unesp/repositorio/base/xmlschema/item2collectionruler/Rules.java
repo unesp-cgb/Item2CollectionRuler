@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="match" maxOccurs="unbounded">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;pattern value="^[a-z0-9 ]*$"/>
+ *               &lt;pattern value="[a-z0-9 ]*"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
