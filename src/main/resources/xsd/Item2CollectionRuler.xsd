@@ -17,9 +17,15 @@
 		<xs:attribute name="label" use="optional" type="xs:string" />
 	</xs:complexType>
 	
-	<xs:complexType name="Rules" >
+	<xs:complexType name="Rules">
 		<xs:sequence>
-			<xs:element name="match" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="match" minOccurs="1" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="^[a-z0-9 ]*$"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	
