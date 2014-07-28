@@ -172,7 +172,7 @@ public class GUI extends JFrame {
 
 				try {
 					i2c.organizeItensOnCollections();
-					JOptionPane.showMessageDialog(GUI.this, "Info: Organized","Sucess",JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(GUI.this, "Info: Organized","Success",JOptionPane.INFORMATION_MESSAGE);
 				} catch (JAXBException e) {
 					JOptionPane.showMessageDialog(GUI.this, "Error: Cannot read xml file",e.getClass().getSimpleName(),JOptionPane.ERROR_MESSAGE);
 				} catch (IOException e) {
