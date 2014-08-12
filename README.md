@@ -32,8 +32,8 @@ Existem 2 modos de utilizar a aplicação: uma via interface gráfica e outra vi
 #### Utilização via interface gráfica
 
 Para a utilização via interface gráfica, é necessário preencher os campos:
-* **rules.xml**: caminho do arquivo XML contendo as regras para a vinculação; o arquivo XML deve seguir as especificações da seção Modelo de Dados -> XML.
-* **in.csv**: caminho do arquivo CSV contendo os metadados dos itens; o arquivo CSV deve serguir as especificações da seção Modelo de Dados -> CSV.
+* **rules.xml**: caminho do arquivo XML contendo as regras para a vinculação; o arquivo XML deve seguir as especificações da seção [Modelo de Dados (XML)](#xml).
+* **in.csv**: caminho do arquivo CSV contendo os metadados dos itens; o arquivo CSV deve serguir as especificações da seção [Modelo de Dados (CSV)](#csv).
 * **out.csv**: caminho e nome do arquivo CSV que deverá ser criado após a execução do Item2CollectionRuler.
 * **csv** **column**: cabeçalho da coluna do arquivo CSV (in.csv) que contem os valores que servirão de base para a vinculação; o cabeçalho informado deve conter a indicação do idioma entre colchetes (exemplos: [en], [pt], [es]), se tal indicação constar no CSV.
 * **default**: handle da coleção a qual deverão ser vinculados os itens que não puderem ser vinculados a nenhuma das coleções especificadas no rules.xml.
@@ -43,7 +43,7 @@ Exemplo:
 * in.csv: D:\data\items-to-be-mapped.csv
 * out.csv: D:\data\items-mapped.csv
 * csv column: dc.description.affiliation[en]
-* default: university/987
+* default: university/123
 
 #### Utilização via console
 
@@ -51,13 +51,13 @@ Existem 6 parâmetros na utilização via console e uma vez que algum desses inf
 * **-h** ou **--help**: [Opcional]  Mostra os parametros possíveis a serem utilizados.
 * **-H** ou **--handle (valor)**: [Opcional] Informar o handle da coleção padrão para quando não se encaixar em nenhuma regra. Valor padrão: 12345678/1
 * **-c** ou **--column (valor)**: [Opcional] Informar o titulo da coluna onde o programa deve analisar os valores. Valor padrão: dc.description.affiliation[].
-* **-i** ou **--input-file (valor)**: [Obrigatório] Informar o caminho do arquivo CSV contendo os metadados dos itens; o arquivo CSV deve serguir as especificações da seção Modelo de Dados -> XML.
+* **-i** ou **--input-file (valor)**: [Obrigatório] Informar o caminho do arquivo CSV contendo os metadados dos itens; o arquivo CSV deve serguir as especificações da seção [Modelo de Dados (XML)](#xml).
 * **-o** ou **--output-file (valor)**: [Obrigatório] Informar o caminho e nome do arquivo CSV que deverá ser criado após a execução do Item2CollectionRuler.
-* **-m** ou **--map-file (valor)**: [Obrigatório] Informar o caminho do arquivo XML contendo as regras para a vinculação; o arquivo XML deve seguir as especificações da seção Modelo de Dados -> CSV.
+* **-m** ou **--map-file (valor)**: [Obrigatório] Informar o caminho do arquivo XML contendo as regras para a vinculação; o arquivo XML deve seguir as especificações da seção [Modelo de Dados (CSV)](#csv).
 
 #### Observações
 
-A execução do programa leva em torno de alguns segundos, caso a execução esteja demorando recomenda-se a modificação do valor padrão da memória do java pelo parâmetro: -Xmx???m onde ??? é o número de megabytes de memória a disponibilizar.  
+A execução do programa leva em torno de alguns segundos, caso a execução esteja demorando recomenda-se a modificação do valor padrão da memória do java pelo parâmetro: `-Xmx???m` onde ??? é o número de megabytes de memória a disponibilizar.  
 
 ### Modelo de Dados
 
