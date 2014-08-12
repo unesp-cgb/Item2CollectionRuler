@@ -12,7 +12,7 @@ Item2CollectionRuler
 * [Modelo de Dados](#modelo-de-dados)
  * [XML](#xml)
  * [CSV](#csv)
-* [Referências](#refs)
+* [Referências](#referências)
 
 
 ### Objetivo
