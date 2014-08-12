@@ -77,5 +77,5 @@ O Item2CollectionRuler utiliza o mesmo padrão de aquivo CSV (RFC4180) que o sof
 * http://www.ietf.org/rfc/rfc4180.txt
 * https://wiki.duraspace.org/display/DSDOC4x/Batch+Metadata+Editing#BatchMetadataEditing-TheCSVFiles
 * http://base.repositorio.unesp.br/XMLSchema/Item2CollectionRuler
-* https://github.com/vitorsilverio/Item2CollectionRuller
+* https://github.com/vitorsilverio/Item2CollectionRuler
 * http://www.dspace.org
