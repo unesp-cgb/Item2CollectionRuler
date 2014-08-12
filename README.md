@@ -1,4 +1,4 @@
-Item2CollectionRuller
+Item2CollectionRuler
 =====================
 
 ### Sumário
@@ -66,7 +66,7 @@ A execução do programa leva em torno de alguns segundos, caso a execução est
 1. Para a criação de regras é necessário utilizar um arquivo XML com as seguintes especificações:
 Versão 1.0
 2. Utilizar codificação UTF-8
-3. Deve seguir exclusivamente o schema Item2CollectionRuller em http://base.repositorio.unesp.br/XMLSchema/Item2CollectionRuler
+3. Deve seguir exclusivamente o schema Item2CollectionRuler em http://base.repositorio.unesp.br/XMLSchema/Item2CollectionRuler
 
 #### CSV
 
