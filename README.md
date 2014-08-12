@@ -4,7 +4,7 @@ Item2CollectionRuler
 ### Sumário
 
 * [Objetivo](#objetivo)
-* [Requisitos de uso](#requisitos)
+* [Requisitos de uso](#requisitos-de-uso)
 * [Uso](#uso)
  * [Utilização via interface gráfica](#utilização-via-interface-gráfica)
  * [Utilização via console](#utilização-via-console)
