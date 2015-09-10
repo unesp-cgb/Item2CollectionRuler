@@ -149,5 +149,10 @@ public class Campus {
     public void setLabel(String value) {
         this.label = value;
     }
+    
+    @Override
+    public String toString() {
+    	return this.label;
+    }
 
 }

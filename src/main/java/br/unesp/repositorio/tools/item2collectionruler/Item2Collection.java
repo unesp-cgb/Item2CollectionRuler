@@ -20,15 +20,15 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
-import org.apache.commons.csv.Quote;
+import org.apache.commons.csv.QuoteMode;
+
+import com.google.common.base.Joiner;
 
 import br.unesp.repositorio.base.xmlschema.item2collectionruler.Campus;
 import br.unesp.repositorio.base.xmlschema.item2collectionruler.Department;
 import br.unesp.repositorio.base.xmlschema.item2collectionruler.ObjectFactory;
 import br.unesp.repositorio.base.xmlschema.item2collectionruler.University;
 import br.unesp.repositorio.tools.item2collectionruler.tools.TextUtils;
-
-import com.google.common.base.Joiner;
 
 public class Item2Collection {
 	private File inputCsv;
@@ -56,7 +56,7 @@ public class Item2Collection {
 		CSVRecord headerRecord = records.get(0);
 		String[] header = ((List<String>)IteratorUtils.toList(headerRecord.iterator())).toArray(new String[headerRecord.size()]);
 		int metadataIndex = Arrays.asList(header).indexOf(this.metadataName);
-		CSVPrinter csvPrinter = new CSVPrinter(new OutputStreamWriter(new FileOutputStream(outputCsv),"UTF8"), CSVFormat.DEFAULT.withDelimiter(',').withHeader(header).withRecordSeparator("\n").withQuotePolicy(Quote.MINIMAL));
+		CSVPrinter csvPrinter = new CSVPrinter(new OutputStreamWriter(new FileOutputStream(outputCsv),"UTF8"), CSVFormat.DEFAULT.withDelimiter(',').withHeader(header).withRecordSeparator("\n").withQuoteMode(QuoteMode.MINIMAL));
 		for(CSVRecord record : records){
 			if(!record.equals(headerRecord)){
 				List<String> collections = new ArrayList<String>();

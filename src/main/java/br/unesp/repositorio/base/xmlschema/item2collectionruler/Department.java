@@ -122,4 +122,8 @@ public class Department {
         this.label = value;
     }
 
+    @Override
+    public String toString() {
+    	return this.label;
+    }
 }
